@@ -1,0 +1,44 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+.containerList {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+.logoName {
+  font-weight: bold;
+  font-size: 2.5rem;
+
+  letter-spacing: 0.2rem;
+  margin-left: 1.5rem;
+  transition: font-size 0.5s ease;
+}
+.logoName:hover {
+  font-size: 3rem;
+}
+.logoName span {
+  color: #5918df;
+  font-weight: 100;
+}
+.containerList a {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.481);
+  font-weight: 100;
+  font-size: 1.5rem;
+  /* transition: color 1s ease-in-out; */
+}
+.containerList a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.containerList a span {
+  margin-left: 0.5rem;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.264);
+}

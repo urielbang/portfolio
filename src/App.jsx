@@ -1,12 +1,13 @@
 import AnimatedCursor from "react-animated-cursor";
 import LandPage from "./components/landpage/LandPage";
+import Works from "./components/works/Works";
 
 function App() {
   return (
     <div className="appContainer">
       <LandPage />
+      <Works />
       <AnimatedCursor
-        className="cursor"
         innerSize={8} // Set the size of the inner dot
         outerSize={8} // Set the size of the outer circle
         color="255, 255, 255" // Set the color to white

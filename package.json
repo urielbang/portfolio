@@ -10,6 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/drei": "^9.102.6",
+    "@splinetool/loader": "^1.0.78",
+    "@splinetool/r3f-spline": "^1.0.2",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^1.0.78",
     "jquery": "^3.7.1",
     "react": "^18.2.0",
     "react-animated-cursor": "^2.11.2",

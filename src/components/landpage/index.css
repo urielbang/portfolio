@@ -8,3 +8,25 @@
   flex-direction: column;
   color: white;
 }
+.containerAnimation {
+  display: flex;
+
+  align-self: flex-end;
+  padding: 2rem;
+}
+.computerAnimation {
+  height: 70vh;
+
+  width: 40vw;
+  display: flex;
+}
+.timeline {
+  background-color: #5918df;
+  height: 200%;
+  left: -10px;
+  position: absolute;
+  top: 10rem;
+  width: 1px;
+  margin-left: 20rem;
+  z-index: 9;
+}

@@ -1,10 +1,21 @@
 import NavBar from "../navbar/NavBar";
 import Spline from "@splinetool/react-spline";
+import { load } from "./loaded";
 
 import "./index.css";
+import { useEffect } from "react";
 export default function LandPage() {
+  // useEffect(() => {
+  //   load();
+  // }, []);
   return (
     <div className="lanPageContainer">
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+      </div>
       <NavBar />
       <div className="containerText">
         <a>

@@ -13,11 +13,11 @@ export default function NavBar() {
       </a>
 
       <ul className={isCross ? "activeNab" : "containerList"}>
-        <a>
+        <a href="#start">
           {`Start`}
           <span>{`/>`}</span>
         </a>
-        <a>
+        <a href="#work">
           {`Work`}
           <span>{`/>`}</span>
         </a>

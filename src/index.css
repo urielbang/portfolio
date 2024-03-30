@@ -2,3 +2,12 @@ body {
   margin: 0;
   font-family: Roboto Condensed, Lato, Arial, sans-serif;
 }
+a {
+  text-decoration: none;
+}
+/* #work {
+  transition: 1s ease-in;
+}
+#work:fullscreen {
+  transition: 1s ease-in;
+} */

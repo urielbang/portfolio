@@ -220,3 +220,15 @@ h1 {
   transition: width 2s ease-in-outs;
   right: -1rem;
 }
+.cvButton {
+  color: #eee;
+  font-size: large;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #eee;
+  padding: 20px 30px;
+  border-radius: 40px;
+  margin-top: 30px;
+  display: block;
+  width: max-content;
+}

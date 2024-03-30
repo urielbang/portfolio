@@ -1,11 +1,21 @@
 import NavBar from "../navbar/NavBar";
 import Spline from "@splinetool/react-spline";
 import { load } from "./loaded";
+import { FaReact } from "react-icons/fa6";
+
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+
 import svg from "../../assets/scroll.svg";
 
 import "./index.css";
 
 export default function LandPage() {
+  const scrollToWork = () => {
+    scroll.scrollTo("#start", {
+      duration: 800,
+      smooth: "easeInOutQuart",
+    });
+  };
   return (
     <div className="lanPageContainer" id="start">
       <div id="loader-wrapper">
@@ -16,9 +26,15 @@ export default function LandPage() {
       <NavBar />
       <div className="timeline">
         <div className="bullet"></div>
-        <a href="#work" className="scroll-bottom">
+        <ScrollLink
+          to="work"
+          className="scroll-bottom"
+          smooth={true}
+          duration={800}
+          onClick={scrollToWork}
+        >
           <img className="scroll-img" src={svg} alt="" srcset="" />
-        </a>
+        </ScrollLink>
       </div>
       <div className="containerText">
         <a>
@@ -29,6 +45,7 @@ export default function LandPage() {
           Hi, my name is <span className="namePurple">Uriel Bengaev</span>
         </h1>
         <h1>i'm Full stack developer</h1>
+        <a className="cvButton">Download my CV</a>
         <span className="letText">Let me show you...</span>
       </div>
 

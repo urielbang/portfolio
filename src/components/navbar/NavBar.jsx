@@ -1,11 +1,20 @@
 import { useState } from "react";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+
 import "./index.css";
 
 export default function NavBar() {
   const [isCross, setIsCross] = useState(false);
+  const scrollToPage = (namePage) => {
+    scroll.scrollTo(`#${namePage}`, {
+      duration: 800,
+      smooth: "easeInOutQuart",
+    });
+  };
   const handleClick = () => {
     setIsCross((prevState) => !prevState);
   };
+
   return (
     <nav className="navBar">
       <a className="logoName">
@@ -13,26 +22,58 @@ export default function NavBar() {
       </a>
 
       <ul className={isCross ? "activeNab" : "containerList"}>
-        <a href="#start">
-          {`Start`}
+        <ScrollLink
+          to="start"
+          className="scroll-bottom"
+          smooth={true}
+          duration={800}
+          onClick={() => scrollToPage("start")}
+        >
+          Start
           <span>{`/>`}</span>
-        </a>
-        <a href="#work">
-          {`Work`}
+        </ScrollLink>
+
+        <ScrollLink
+          to="skills"
+          smooth={true}
+          duration={800}
+          onClick={() => scrollToPage("skills")}
+        >
+          Skills
           <span>{`/>`}</span>
-        </a>
-        <a>
-          {`Lab`}
+        </ScrollLink>
+
+        <ScrollLink
+          to="work"
+          className="scroll-bottom"
+          smooth={true}
+          duration={800}
+          onClick={() => scrollToPage("Work")}
+        >
+          Work
           <span>{`/>`}</span>
-        </a>
-        <a>
-          {`About`}
+        </ScrollLink>
+
+        <ScrollLink
+          to="about"
+          className="scroll-bottom"
+          smooth={true}
+          duration={800}
+          onClick={() => scrollToPage("about")}
+        >
+          About
           <span>{`/>`}</span>
-        </a>
-        <a>
-          {`Contact`}
+        </ScrollLink>
+        <ScrollLink
+          to="contact"
+          className="scroll-bottom"
+          smooth={true}
+          duration={800}
+          onClick={() => scrollToPage("about")}
+        >
+          Contact
           <span>{`/>`}</span>
-        </a>
+        </ScrollLink>
       </ul>
       <div
         className={isCross ? "cross" : ""}

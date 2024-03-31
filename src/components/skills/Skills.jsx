@@ -79,6 +79,15 @@ export default function Skills() {
   ]);
   return (
     <div id="skills" className="containerSkills">
+      <div className="containerTagSkills">
+        <a className="skillsTag">
+          {`Skills`}
+          <span>{`/>`}</span>
+        </a>
+      </div>
+
+      <small className="bulletSkills"></small>
+
       <div className="title">this is my skills</div>
       {/* <div className="des">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum

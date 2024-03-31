@@ -1,5 +1,63 @@
 .worksContainer {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  color: white;
   background-image: linear-gradient(40deg, #1a1527, #0e0c16 88%, #0e0c16 99%);
+}
+.projects .title {
+  font-size: 5vw;
+  align-items: center;
+  font-family: "MuseoModerno", sans-serif;
+  margin-top: 100px;
+}
+.projects .des {
+  color: #eee5;
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.projects .list {
+  margin-top: 50px;
+}
+.projects .item {
+  display: grid;
+  grid-template-columns: repeat(2, 1rf);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+.projects .images {
+  background-image: linear-gradient(-45deg, #473bb4, #be24a9);
+  padding: 40px;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.images img {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px #010824;
+}
+.projects .content h3 {
+  font-size: 3em;
+  margin: 0;
+}
+.content .des {
+  text-align: left;
+  width: 100%;
+}
+.content .mission {
+  grid-template-columns: 70px 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.content .mission div:nth-child(1) svg {
+  background-color: #eee3;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 15px;
 }

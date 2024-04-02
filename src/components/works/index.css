@@ -36,7 +36,7 @@
   overflow: hidden;
 }
 .images img {
-  height: 400px;
+  height: 100%;
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 20px 40px #010824;
@@ -60,4 +60,15 @@
   padding: 20px;
   font-size: 20px;
   border-radius: 15px;
+}
+.images:nth-child(2n) {
+  grid-column-start: 2;
+}
+.images .content:nth-child(2n) {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.list a {
+  z-index: 20;
+  color: white;
 }

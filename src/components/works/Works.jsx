@@ -80,6 +80,28 @@ export default function Works() {
       mission: "Full Stack",
     },
   ]);
+  const urlApp = (index) => {
+    switch (index) {
+      case 0:
+        return "https://urielbang.github.io/calculator-app-main/";
+      case 1:
+        return "main--budget-tracker-urielapp.netlify.app/";
+      case 2:
+        return "https://finance-app-uriel.netlify.app/";
+      case 3:
+        return "https://job-q-d8a10.web.app/";
+      case 4:
+        return "https://store-app-uriel.netlify.app/";
+      case 5:
+        return "";
+      case 6:
+        return "https://urielbang.github.io/app-movies/";
+      case 7:
+        return "https://main--rezume-app.netlify.app/";
+      case 8:
+        return "https://main--togetherapp-uriel.netlify.app/";
+    }
+  };
   return (
     <div className="worksContainer" id="work">
       <div className="containerTagSkills">
@@ -93,30 +115,33 @@ export default function Works() {
         <div className="title">this is my Projects</div>
         <div className="list">
           {projects.map((project, index) => {
+            const url = urlApp(index);
             return (
-              <div key={index} className="item">
-                <div className="images">{project.image}</div>
-                <div className="content">
-                  <h3>{project.name}</h3>
-                  <div className="des">{project.description}</div>
+              <a href={url} target="_blank">
+                <div key={index} className="item">
+                  <div className="images">{project.image}</div>
+                  <div className="content">
+                    <h3>{project.name}</h3>
+                    <div className="des">{project.description}</div>
 
-                  <div className="mission">
-                    <div>
-                      <CiCircleQuestion />
+                    <div className="mission">
+                      <div>
+                        <CiCircleQuestion />
+                      </div>
+                      <h4>Mission</h4>
+                      <div className="de">{project.mission}</div>
                     </div>
-                    <h4>Mission</h4>
-                    <div className="de">{project.mission}</div>
-                  </div>
 
-                  <div className="mission">
-                    <div>
-                      <FaEarthAmericas />
+                    <div className="mission">
+                      <div>
+                        <FaEarthAmericas />
+                      </div>
+                      <h4>Languages</h4>
+                      <div className="de">{project.language}</div>
                     </div>
-                    <h4>Languages</h4>
-                    <div className="de">{project.language}</div>
                   </div>
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>

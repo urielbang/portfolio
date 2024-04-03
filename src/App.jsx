@@ -2,8 +2,14 @@ import AnimatedCursor from "react-animated-cursor";
 import LandPage from "./components/landpage/LandPage";
 import Works from "./components/works/Works";
 import Skills from "./components/skills/Skills";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="appContainer">
       <LandPage />

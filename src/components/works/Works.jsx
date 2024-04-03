@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import imgCalculator from "../../assets/Calculator.png";
 import imgBudget from "../../assets/budget-tracker.png";
 import financeImg from "../../assets/finance-app.png";
@@ -102,22 +104,29 @@ export default function Works() {
         return "https://main--togetherapp-uriel.netlify.app/";
     }
   };
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="worksContainer" id="work">
       <div className="containerTagSkills">
-        <a className="skillsTag">
+        <a className="skillsTag" data-aos="fade-right">
           {`Works`}
           <span>{`/>`}</span>
         </a>
       </div>
-      <small className="bulletSkills"></small>
+      <small className="bulletSkills" data-aos="fade-right"></small>
       <section className="projects">
-        <div className="title">this is my Projects</div>
+        <div className="title" data-aos="fade-up" data-aos-duration="3000">
+          this is my Projects
+        </div>
         <div className="list">
           {projects.map((project, index) => {
             const url = urlApp(index);
+            const aosAnimation =
+              index % 2 == 0 ? "fade-up-right" : "fade-up-left";
             return (
-              <a href={url} target="_blank">
+              <a href={url} target="_blank" data-aos={aosAnimation}>
                 <div key={index} className="item">
                   <div className="images">{project.image}</div>
                   <div className="content">

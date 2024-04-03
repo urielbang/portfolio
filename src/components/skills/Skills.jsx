@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaHtml5,
   FaCss3,
@@ -8,7 +8,8 @@ import {
   FaGit,
 } from "react-icons/fa";
 import { PiFileSql } from "react-icons/pi";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { IoLogoJavascript } from "react-icons/io5";
 import { BiLogoMongodb } from "react-icons/bi";
 import { SiExpress } from "react-icons/si";
@@ -77,28 +78,28 @@ export default function Skills() {
       icon: <PiFileSql className="svg" />,
     },
   ]);
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div id="skills" className="containerSkills">
       <div className="containerTagSkills">
-        <a className="skillsTag">
+        <a className="skillsTag" data-aos="fade-right">
           {`Skills`}
           <span>{`/>`}</span>
         </a>
       </div>
 
-      <small className="bulletSkills"></small>
+      <small className="bulletSkills" data-aos="fade-right"></small>
 
-      <div className="title">this is my skills</div>
-      {/* <div className="des">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
-        consectetur, aspernatur impedit blanditiis nihil quam minus, repellendus
-        expedita nisi in laudantium asperiores a consequatur quo aliquam
-        quibusdam suscipit, ea hic.
-      </div> */}
+      <div className="title" data-aos="fade-up">
+        this is my skills
+      </div>
+
       <div className="list">
         {listSkills.map((value, key) => {
           return (
-            <div key={key} className="item">
+            <div key={key} className="item" data-aos="fade-up">
               {value.icon}
               <h3>{value.name}</h3>
               <div className="des">{value.description}</div>

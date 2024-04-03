@@ -5,7 +5,9 @@ import "./index.css";
 
 export default function NavBar() {
   const [isCross, setIsCross] = useState(false);
+  const [activeItem, setActiveItem] = useState("Start");
   const scrollToPage = (namePage) => {
+    setActiveItem(namePage);
     scroll.scrollTo(`#${namePage}`, {
       duration: 800,
       smooth: "easeInOutQuart",
@@ -16,15 +18,15 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="navBar">
+    <nav className="navBar" data-aos="fade-up">
       <a className="logoName">
         <span>{`<`}</span>URI-B<span>{`/>`}</span>
       </a>
 
       <ul className={isCross ? "activeNab" : "containerList"}>
         <ScrollLink
+          style={{ color: activeItem === "start" ? "white" : "" }}
           to="start"
-          className="scroll-bottom"
           smooth={true}
           duration={800}
           onClick={() => scrollToPage("start")}
@@ -35,6 +37,7 @@ export default function NavBar() {
 
         <ScrollLink
           to="skills"
+          style={{ color: activeItem === "skills" ? "white" : "" }}
           smooth={true}
           duration={800}
           onClick={() => scrollToPage("skills")}
@@ -45,6 +48,7 @@ export default function NavBar() {
 
         <ScrollLink
           to="work"
+          style={{ color: activeItem === "Work" ? "white" : "" }}
           className="scroll-bottom"
           smooth={true}
           duration={800}
@@ -56,6 +60,7 @@ export default function NavBar() {
 
         <ScrollLink
           to="about"
+          style={{ color: activeItem === "about" ? "white" : "" }}
           className="scroll-bottom"
           smooth={true}
           duration={800}
@@ -66,10 +71,11 @@ export default function NavBar() {
         </ScrollLink>
         <ScrollLink
           to="contact"
+          style={{ color: activeItem === "contact" ? "white" : "" }}
           className="scroll-bottom"
           smooth={true}
           duration={800}
-          onClick={() => scrollToPage("about")}
+          onClick={() => scrollToPage("contact")}
         >
           Contact
           <span>{`/>`}</span>

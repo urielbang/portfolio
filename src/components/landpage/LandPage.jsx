@@ -2,13 +2,9 @@ import NavBar from "../navbar/NavBar";
 import Spline from "@splinetool/react-spline";
 import { load } from "./loaded";
 import { saveAs } from "file-saver";
-
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-
 import svg from "../../assets/scroll.svg";
-
 import "./index.css";
-
 export default function LandPage() {
   const scrollToWork = () => {
     scroll.scrollTo("#start", {
@@ -19,25 +15,32 @@ export default function LandPage() {
 
   return (
     <div className="lanPageContainer" id="start">
-      <div id="loader-wrapper">
+      {/* <div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-      </div>
+      </div> */}
       <NavBar />
-      <div className="timeline">
-        <div className="bullet"></div>
+      <div className="timeline" data-aos="fade-right">
+        <div className="bullet" data-aos="fade-right"></div>
         <ScrollLink
+          data-aos="fade-right"
           to="work"
           className="scroll-bottom"
           smooth={true}
           duration={800}
           onClick={scrollToWork}
         >
-          <img className="scroll-img" src={svg} alt="" srcset="" />
+          <img
+            className="scroll-img"
+            src={svg}
+            alt=""
+            srcset=""
+            data-aos="fade-right"
+          />
         </ScrollLink>
       </div>
-      <div className="containerText">
+      <div className="containerText" data-aos="fade-right">
         <a>
           {`Start`}
           <span>{`/>`}</span>

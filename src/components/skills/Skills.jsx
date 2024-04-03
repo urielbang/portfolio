@@ -92,7 +92,7 @@ export default function Skills() {
 
       <small className="bulletSkills" data-aos="fade-right"></small>
 
-      <div className="title" data-aos="fade-up">
+      <div className="title" data-aos="fade-up" data-aos-duration="3000">
         this is my skills
       </div>
 

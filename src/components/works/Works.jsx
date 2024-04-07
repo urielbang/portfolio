@@ -85,23 +85,23 @@ export default function Works() {
   const urlApp = (index) => {
     switch (index) {
       case 0:
-        return "https://urielbang.github.io/calculator-app-main/";
+        return "https://urielbang.github.io/calculator-app-main";
       case 1:
-        return "main--budget-tracker-urielapp.netlify.app/";
+        return "main--budget-tracker-urielapp.netlify.app";
       case 2:
-        return "https://finance-app-uriel.netlify.app/";
+        return "https://finance-app-uriel.netlify.app";
       case 3:
-        return "https://job-q-d8a10.web.app/";
+        return "https://job-q-d8a10.web.app";
       case 4:
-        return "https://store-app-uriel.netlify.app/";
+        return "https://store-app-uriel.netlify.app";
       case 5:
-        return "";
+        return "https://spotify-uri.netlify.app/";
       case 6:
-        return "https://urielbang.github.io/app-movies/";
+        return "https://urielbang.github.io/app-movies";
       case 7:
-        return "https://main--rezume-app.netlify.app/";
+        return "https://main--rezume-app.netlify.app";
       case 8:
-        return "https://main--togetherapp-uriel.netlify.app/";
+        return "https://main--togetherapp-uriel.netlify.app";
     }
   };
   useEffect(() => {

@@ -120,14 +120,19 @@ export default function Works() {
         <div className="title" data-aos="fade-up" data-aos-duration="3000">
           this is my Projects
         </div>
-        <div className="list">
+        <div className="list-projects">
           {projects.map((project, index) => {
             const url = urlApp(index);
             const aosAnimation =
               index % 2 == 0 ? "fade-up-right" : "fade-up-left";
             return (
-              <a href={url} target="_blank" data-aos={aosAnimation}>
-                <div key={index} className="item">
+              <a
+                href={url}
+                target="_blank"
+                data-aos={aosAnimation}
+                className="cardProject"
+              >
+                <div key={index} className="item-work">
                   <div className="images">{project.image}</div>
                   <div className="content">
                     <h3>{project.name}</h3>

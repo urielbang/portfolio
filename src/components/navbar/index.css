@@ -162,6 +162,20 @@ path#middle {
   .navBar {
     margin: 0;
   }
+  .item {
+    width: 65%;
+  }
+
+  .cardProject {
+    width: 5vw;
+    height: 20%;
+  }
+  /* .projects .list a {
+    width: 5vw;
+    display: flex;
+    height: 20vh;
+    background-color: #1da1f2;
+  } */
 }
 
 .containerList p {

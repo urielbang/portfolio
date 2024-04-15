@@ -7,6 +7,7 @@ import {
   FaReact,
   FaGit,
 } from "react-icons/fa";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 import { PiFileSql } from "react-icons/pi";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -78,6 +79,12 @@ export default function Skills() {
       icon: <PiFileSql className="svg" />,
     },
   ]);
+  const calculateRotation = (e, ref) => {
+    const x = (e.nativeEvent.offsetX - ref.current.offsetWidth / 2) / 10;
+    const y = -(e.nativeEvent.offsetY - ref.current.offsetHeight / 2) / 10;
+    return { x, y };
+  };
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -97,13 +104,37 @@ export default function Skills() {
       </div>
 
       <div className="list">
-        {listSkills.map((value, key) => {
+        {listSkills.map((skill, index) => {
+          const x = useMotionValue(0);
+          const y = useMotionValue(0);
+          const tiltEffect = (e, ref) => {
+            const { x: mouseX, y: mouseY } = calculateRotation(e, ref);
+            x.set(mouseX);
+            y.set(mouseY);
+          };
+          const ref = React.useRef();
           return (
-            <div key={key} className="item" data-aos="fade-up">
-              {value.icon}
-              <h3>{value.name}</h3>
-              <div className="des">{value.description}</div>
-            </div>
+            <motion.div
+              key={index}
+              className="item"
+              ref={ref}
+              data-aos="fade-up"
+              style={{
+                transformStyle: "preserve-3d",
+                rotateX: useTransform(y, [-10, 10], [-10, 10]),
+                rotateY: useTransform(x, [-10, 10], [-10, 10]),
+                transformPerspective: 500,
+              }}
+              onMouseMove={(e) => tiltEffect(e, ref)}
+              onMouseLeave={() => {
+                x.set(0);
+                y.set(0);
+              }}
+            >
+              {skill.icon}
+              <h3>{skill.name}</h3>
+              <div className="des">{skill.description}</div>
+            </motion.div>
           );
         })}
       </div>

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./index.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 import imgCalculator from "../../assets/Calculator.png";
 import imgBudget from "../../assets/budget-tracker.png";
 import financeImg from "../../assets/finance-app.png";
@@ -82,6 +83,11 @@ export default function Works() {
       mission: "Full Stack",
     },
   ]);
+  const calculateRotation = (e, ref) => {
+    const x = (e.nativeEvent.offsetX - ref.current.offsetWidth / 2) / 10;
+    const y = -(e.nativeEvent.offsetY - ref.current.offsetHeight / 2) / 10;
+    return { x, y };
+  };
   const urlApp = (index) => {
     switch (index) {
       case 0:
@@ -122,22 +128,54 @@ export default function Works() {
         </div>
         <div className="list-projects">
           {projects.map((project, index) => {
+            const x = useMotionValue(0);
+            const y = useMotionValue(0);
+            const rotateX = useTransform(y, [-10, 10], [-10, 10]);
+            const rotateY = useTransform(x, [-10, 10], [-10, 10]);
+            const ref = useRef(null);
+
+            const handleMouseMove = (e) => {
+              const rect = ref.current.getBoundingClientRect();
+              const mouseX = (e.clientX - rect.left - rect.width / 2) / 10;
+              const mouseY = -(e.clientY - rect.top - rect.height / 2) / 10;
+              x.set(mouseX);
+              y.set(mouseY);
+            };
             const url = urlApp(index);
             const aosAnimation =
               index % 2 == 0 ? "fade-up-right" : "fade-up-left";
+
             return (
-              <a
-                href={url}
-                target="_blank"
+              <motion.div
+                ref={ref}
+                style={{
+                  transformStyle: "preserve-3d",
+                  rotateX: rotateX,
+                  rotateY: rotateY,
+                  transformPerspective: 500,
+                  zIndex: 50,
+                  backgroundColor: "#01082488",
+                  padding: "20px",
+                  borderRadius: "20px",
+                }}
+                onMouseMove={handleMouseMove}
+                onMouseLeave={() => {
+                  x.set(0);
+                  y.set(0);
+                }}
+                className="item-work"
                 data-aos={aosAnimation}
-                className="cardProject"
               >
-                <div key={index} className="item-work">
+                <a
+                  href={url}
+                  target="_blank"
+                  className="cardProject"
+                  data-aos={aosAnimation}
+                >
                   <div className="images">{project.image}</div>
                   <div className="content">
                     <h3>{project.name}</h3>
                     <div className="des">{project.description}</div>
-
                     <div className="mission">
                       <div>
                         <CiCircleQuestion />
@@ -145,17 +183,16 @@ export default function Works() {
                       <h4>Mission</h4>
                       <div className="de">{project.mission}</div>
                     </div>
-
                     <div className="mission">
                       <div>
                         <FaEarthAmericas />
                       </div>
                       <h4>Languages</h4>
-                      <div className="de">{project.language}</div>
+                      <div className="de">{project.language.join(", ")}</div>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </motion.div>
             );
           })}
         </div>

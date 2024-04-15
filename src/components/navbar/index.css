@@ -2,7 +2,7 @@
   backdrop-filter: blur(10px);
   padding: 1rem;
   position: fixed;
-  z-index: 25;
+  z-index: 60;
   display: flex;
 
   width: 100%;

@@ -114,27 +114,29 @@ export default function Skills() {
           };
           const ref = React.useRef();
           return (
-            <motion.div
-              key={index}
-              className="item"
-              ref={ref}
-              data-aos="fade-up"
-              style={{
-                transformStyle: "preserve-3d",
-                rotateX: useTransform(y, [-10, 10], [-10, 10]),
-                rotateY: useTransform(x, [-10, 10], [-10, 10]),
-                transformPerspective: 500,
-              }}
-              onMouseMove={(e) => tiltEffect(e, ref)}
-              onMouseLeave={() => {
-                x.set(0);
-                y.set(0);
-              }}
-            >
-              {skill.icon}
-              <h3>{skill.name}</h3>
-              <div className="des">{skill.description}</div>
-            </motion.div>
+            <div data-aos="fade-up" className="skillItem">
+              <motion.div
+                key={index}
+                className="item"
+                ref={ref}
+                data-aos="fade-up"
+                style={{
+                  transformStyle: "preserve-3d",
+                  rotateX: useTransform(y, [-10, 10], [-10, 10]),
+                  rotateY: useTransform(x, [-10, 10], [-10, 10]),
+                  transformPerspective: 500,
+                }}
+                onMouseMove={(e) => tiltEffect(e, ref)}
+                onMouseLeave={() => {
+                  x.set(0);
+                  y.set(0);
+                }}
+              >
+                {skill.icon}
+                <h3>{skill.name}</h3>
+                <div className="des">{skill.description}</div>
+              </motion.div>
+            </div>
           );
         })}
       </div>

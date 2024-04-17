@@ -10,6 +10,13 @@
   justify-content: space-between;
 }
 
+.activeNab {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-right: 1.5rem;
+}
 .containerList {
   list-style: none;
   display: flex;
@@ -33,6 +40,12 @@
   color: #5918df;
   font-weight: 100;
 }
+.activeNab a {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.481);
+  font-weight: 100;
+  font-size: 1.5rem;
+}
 .containerList a {
   font-weight: bold;
   color: rgba(255, 255, 255, 0.481);
@@ -43,8 +56,16 @@
 .containerList a:hover {
   color: rgb(255, 255, 255);
 }
+.activeNab a:hover {
+  color: rgb(255, 255, 255);
+}
 
 .containerList a span {
+  margin-left: 0.5rem;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.264);
+}
+.activeNab a span {
   margin-left: 0.5rem;
   font-weight: 100;
   color: rgba(255, 255, 255, 0.264);
@@ -140,7 +161,7 @@ path#middle {
     margin-right: 1.5rem;
     flex-direction: column;
     position: absolute;
-    top: 30%;
+    top: 190%;
     left: 50%;
     transition: display 1s ease;
     transform: translate(-50%, -50%);
@@ -162,6 +183,39 @@ path#middle {
   }
   .navBar {
     margin: 0;
+    width: 95%;
+    height: 3rem;
+  }
+  #icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  .navBar svg {
+    background-color: #1da0f200;
+  }
+  .lanPageContainer .containerText {
+    display: flex;
+    margin-left: 7.5rem;
+    margin-top: 15rem;
+
+    height: 100%;
+  }
+  .lanPageContainer .containerText h1 {
+    font-size: 1.3rem;
+  }
+  .lanPageContainer .containerAnimation {
+    display: none;
+  }
+  .containerSkills .item {
+    width: 50%;
+    margin-left: 1rem;
+  }
+  .lanPageContainer .timeline {
+    left: -18rem;
+  }
+  .list-projects .item-work {
+    width: 55%;
+    margin-left: 1rem;
   }
 }
 

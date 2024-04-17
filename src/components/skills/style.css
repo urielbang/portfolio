@@ -121,3 +121,6 @@ svg path {
   width: 0.5rem;
   z-index: 10;
 }
+.skillItem {
+  z-index: 7;
+}

@@ -29,7 +29,10 @@ export default function NavBar() {
           to="start"
           smooth={true}
           duration={800}
-          onClick={() => scrollToPage("start")}
+          onClick={() => {
+            scrollToPage("start");
+            handleClick();
+          }}
         >
           Start
           <span>{`/>`}</span>
@@ -40,7 +43,10 @@ export default function NavBar() {
           style={{ color: activeItem === "skills" ? "white" : "" }}
           smooth={true}
           duration={800}
-          onClick={() => scrollToPage("skills")}
+          onClick={() => {
+            scrollToPage("skills");
+            handleClick();
+          }}
         >
           Skills
           <span>{`/>`}</span>
@@ -52,7 +58,10 @@ export default function NavBar() {
           className="scroll-bottom"
           smooth={true}
           duration={800}
-          onClick={() => scrollToPage("Work")}
+          onClick={() => {
+            scrollToPage("Work");
+            handleClick();
+          }}
         >
           Work
           <span>{`/>`}</span>
@@ -64,7 +73,10 @@ export default function NavBar() {
           className="scroll-bottom"
           smooth={true}
           duration={800}
-          onClick={() => scrollToPage("about")}
+          onClick={() => {
+            scrollToPage("about");
+            handleClick();
+          }}
         >
           About
           <span>{`/>`}</span>
@@ -75,7 +87,10 @@ export default function NavBar() {
           className="scroll-bottom"
           smooth={true}
           duration={800}
-          onClick={() => scrollToPage("contact")}
+          onClick={() => {
+            scrollToPage("contact");
+            handleClick();
+          }}
         >
           Contact
           <span>{`/>`}</span>

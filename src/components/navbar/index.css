@@ -148,7 +148,7 @@ path#middle {
     width: 4rem;
   }
   body {
-    cursor: pointer;
+    cursor: auto;
   }
   .containerList {
     display: none;
@@ -216,11 +216,17 @@ path#middle {
   .list-projects .item-work {
     width: 60%;
   }
-  .containerSkills .skillItem {
-    display: flex;
-    justify-content: center;
-
+  .list-projects {
+    grid-template-columns: repeat(auto-fill, 100%);
+  }
+  .worksContainer .list-projects {
+    padding: 0rem;
+  }
+  .containerSkills .item {
     width: 80%;
+  }
+  .containerSkills .skillItem {
+    width: 65%;
   }
 }
 

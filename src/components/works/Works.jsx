@@ -147,6 +147,7 @@ export default function Works() {
 
             return (
               <motion.div
+                data-aos={aosAnimation}
                 ref={ref}
                 style={{
                   transformStyle: "preserve-3d",
@@ -164,16 +165,12 @@ export default function Works() {
                   y.set(0);
                 }}
                 className="item-work"
-                data-aos={aosAnimation}
               >
-                <a
-                  href={url}
-                  target="_blank"
-                  className="cardProject"
-                  data-aos={aosAnimation}
-                >
-                  <div className="images">{project.image}</div>
-                  <div className="content">
+                <a href={url} target="_blank" className="cardProject">
+                  <div className="images" data-aos={aosAnimation}>
+                    {project.image}
+                  </div>
+                  <div className="content" data-aos={aosAnimation}>
                     <h3>{project.name}</h3>
                     <div className="des">{project.description}</div>
                     <div className="mission">

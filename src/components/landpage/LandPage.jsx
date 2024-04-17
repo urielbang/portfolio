@@ -48,7 +48,7 @@ export default function LandPage() {
         <h1>
           Hi, my name is <span className="namePurple">Uriel Bengaev</span>
         </h1>
-        <h1>i'm Full stack developer</h1>
+        <h1>I'm Full stack developer</h1>
         <a
           href="cvUrielPerg.pdf"
           className="cvButton"

@@ -123,4 +123,5 @@ svg path {
 }
 .skillItem {
   z-index: 7;
+  width: 100%;
 }

@@ -83,11 +83,7 @@ export default function Works() {
       mission: "Full Stack",
     },
   ]);
-  const calculateRotation = (e, ref) => {
-    const x = (e.nativeEvent.offsetX - ref.current.offsetWidth / 2) / 10;
-    const y = -(e.nativeEvent.offsetY - ref.current.offsetHeight / 2) / 10;
-    return { x, y };
-  };
+
   const urlApp = (index) => {
     switch (index) {
       case 0:
@@ -166,23 +162,26 @@ export default function Works() {
                 }}
                 className="item-work"
               >
-                <a href={url} target="_blank" className="cardProject">
-                  <div className="images" data-aos={aosAnimation}>
-                    {project.image}
-                  </div>
-                  <div className="content" data-aos={aosAnimation}>
+                <a
+                  href={url}
+                  target="_blank"
+                  className="cardProject"
+                  data-aos={aosAnimation}
+                >
+                  <div className="images">{project.image}</div>
+                  <div className="content">
                     <h3>{project.name}</h3>
                     <div className="des">{project.description}</div>
                     <div className="mission">
                       <div>
-                        <CiCircleQuestion />
+                        <CiCircleQuestion data-aos={aosAnimation} />
                       </div>
                       <h4>Mission</h4>
                       <div className="de">{project.mission}</div>
                     </div>
                     <div className="mission">
                       <div>
-                        <FaEarthAmericas />
+                        <FaEarthAmericas data-aos={aosAnimation} />
                       </div>
                       <h4>Languages</h4>
                       <div className="de">{project.language.join(", ")}</div>

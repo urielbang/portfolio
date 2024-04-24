@@ -213,9 +213,9 @@ path#middle {
   .lanPageContainer .timeline {
     left: -18rem;
   }
-  .list-projects .item-work {
+  /* .list-projects .item-work {
     width: 60%;
-  }
+  } */
   .list-projects {
     grid-template-columns: repeat(auto-fill, 100%);
   }

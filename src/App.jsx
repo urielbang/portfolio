@@ -5,6 +5,7 @@ import Skills from "./components/skills/Skills";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Contact from "./components/contact/Contact";
 
 function App() {
   useEffect(() => {
@@ -15,7 +16,7 @@ function App() {
       <LandPage />
       <Skills />
       <Works />
-
+      <Contact />
       <AnimatedCursor
         innerSize={8}
         outerSize={8}

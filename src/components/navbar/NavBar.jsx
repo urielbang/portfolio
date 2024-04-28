@@ -68,20 +68,6 @@ export default function NavBar() {
         </ScrollLink>
 
         <ScrollLink
-          to="about"
-          style={{ color: activeItem === "about" ? "white" : "" }}
-          className="scroll-bottom"
-          smooth={true}
-          duration={800}
-          onClick={() => {
-            scrollToPage("about");
-            handleClick();
-          }}
-        >
-          About
-          <span>{`/>`}</span>
-        </ScrollLink>
-        <ScrollLink
           to="contact"
           style={{ color: activeItem === "contact" ? "white" : "" }}
           className="scroll-bottom"

@@ -89,7 +89,7 @@ export default function Works() {
       case 0:
         return "https://urielbang.github.io/calculator-app-main";
       case 1:
-        return "main--budget-tracker-urielapp.netlify.app";
+        return "https://main--budget-tracker-urielapp.netlify.app";
       case 2:
         return "https://finance-app-uriel.netlify.app";
       case 3:

@@ -97,7 +97,7 @@ export default function Works() {
       case 4:
         return "https://store-app-uriel.netlify.app";
       case 5:
-        return "https://spotify-uri.netlify.app/";
+        return "https://spotify-indol-theta.vercel.app";
       case 6:
         return "https://urielbang.github.io/app-movies";
       case 7:

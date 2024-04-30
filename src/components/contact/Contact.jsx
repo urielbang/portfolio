@@ -1,17 +1,40 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./style.css";
+import axios from "axios";
 
 export default function Contact() {
+  const [contactData, setContactData] = useState({});
+  const [inputValue, setInputValue] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setContactData({ ...contactData, [e.target.name]: e.target.value });
+    setInputValue({ ...inputValue, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    await axios.post("https://uriel-protfolio.onrender.com/api/v1/contact", contactData);
+
+    setInputValue({ name: "", email: "", phone: "", message: "" });
+  };
+
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
-    <form className="container" id="contact">
+    <form className="container" id="contact" onSubmit={handleSubmit}>
       <div className="row">
         <h1 className="headerTxt" data-aos="fade-up" data-aos-duration="3000">
-          contact us
+          GET IN TOUCH
         </h1>
       </div>
       <div className="row">
@@ -23,38 +46,58 @@ export default function Contact() {
           data-aos-offset="0"
           style={{ textAlign: "center" }}
         >
-          We'd love to hear from you!
+          I’d love to hear from you!
         </h4>
       </div>
       <div className="row input-container">
         <div data-aos="fade-right">
           <div className="styled-input wide">
-            <input type="text" required />
+            <input
+              type="text"
+              required
+              name="name"
+              onChange={handleChange}
+              value={inputValue.name}
+            />
             <label>Name</label>
           </div>
         </div>
         <div className="col-md-6 col-sm-12" data-aos="fade-left">
           <div className="styled-input">
-            <input type="email" required />
+            <input
+              type="email"
+              required
+              name="email"
+              onChange={handleChange}
+              value={inputValue.email}
+            />
             <label>Email</label>
           </div>
         </div>
         <div className="col-md-6 col-sm-12" data-aos="fade-right">
           <div className="styled-input" style={{ float: "right" }}>
-            <input type="text" required />
+            <input
+              type="text"
+              required
+              name="phone"
+              onChange={handleChange}
+              value={inputValue.phone}
+            />
             <label>Phone Number</label>
           </div>
         </div>
         <div className="col-xs-12">
           <div className="styled-input wide">
-            <textarea required data-aos="fade-right"></textarea>
+            <textarea
+              required
+              data-aos="fade-right"
+              name="message"
+              onChange={handleChange}
+              value={inputValue.message}
+            ></textarea>
             <label>Message</label>
-            <div className="containerBtn">
-              <button
-                type="submit"
-                className="btn-lrg submit-btn"
-                data-aos="fade-up"
-              >
+            <div className="containerBtn" data-aos="fade-up">
+              <button type="submit" className="submit-btn">
                 Send Message
               </button>
             </div>

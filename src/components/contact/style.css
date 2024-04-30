@@ -133,6 +133,25 @@ textarea {
     float: none;
     text-align: center;
   }
+  .headerTxt {
+    font-size: 2rem;
+  }
+  .headerTxtHear {
+    font-size: 1rem;
+  }
+  .styled-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .styled-input label {
+    left: 3.5rem;
+  }
+  input,
+  textarea {
+    width: 50%;
+  }
 }
 
 input[type="checkbox"] + label {

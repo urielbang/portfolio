@@ -91,7 +91,7 @@ export default function Works() {
       case 1:
         return "https://main--budget-tracker-urielapp.netlify.app";
       case 2:
-        return "https://finance-app-uriel.netlify.app";
+        return "https://financeapi-jade.vercel.app";
       case 3:
         return "https://job-q-d8a10.web.app";
       case 4:

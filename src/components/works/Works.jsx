@@ -120,7 +120,7 @@ export default function Works() {
       <small className="bulletSkills" data-aos="fade-right"></small>
       <section className="projects">
         <div className="title" data-aos="fade-up" data-aos-duration="3000">
-          this is my Projects
+          these are my projects
         </div>
         <div className="list-projects">
           {projects.map((project, index) => {
@@ -143,6 +143,7 @@ export default function Works() {
 
             return (
               <motion.div
+                key={index}
                 data-aos={aosAnimation}
                 ref={ref}
                 style={{

@@ -18,10 +18,10 @@ import { FaEarthAmericas } from "react-icons/fa6";
 export default function Works() {
   const [projects] = useState([
     {
-      name: "Calculator",
-      description: "A simple calculator built using JavaScript, HTML, and CSS.",
+      name: "Spotify App",
+      description: "A Spotify clone built with React.",
       language: ["JavaScript", "HTML", "CSS", "React", "Node.js", "MongoDB"],
-      image: <img src={imgCalculator} />,
+      image: <img src={spotifyImg} />,
       mission: "Full Stack",
     },
     {
@@ -55,10 +55,10 @@ export default function Works() {
       mission: "Full Stack",
     },
     {
-      name: "Spotify App",
-      description: "A Spotify clone built with React.",
+      name: "Calculator",
+      description: "A simple calculator built using JavaScript, HTML, and CSS.",
       language: ["JavaScript", "HTML", "CSS", "React", "Node.js", "MongoDB"],
-      image: <img src={spotifyImg} />,
+      image: <img src={imgCalculator} />,
       mission: "Full Stack",
     },
     {
@@ -87,7 +87,7 @@ export default function Works() {
   const urlApp = (index) => {
     switch (index) {
       case 0:
-        return "https://urielbang.github.io/calculator-app-main";
+        return "https://spotify-indol-theta.vercel.app";
       case 1:
         return "https://main--budget-tracker-urielapp.netlify.app";
       case 2:
@@ -97,7 +97,7 @@ export default function Works() {
       case 4:
         return "https://store-app-uriel.netlify.app";
       case 5:
-        return "https://spotify-indol-theta.vercel.app";
+        return "https://urielbang.github.io/calculator-app-main";
       case 6:
         return "https://urielbang.github.io/app-movies";
       case 7:

@@ -57,6 +57,9 @@ svg {
   padding: 10px;
   border-radius: 10px;
 }
+.list img {
+  width: 3rem;
+}
 svg path {
   stroke: white;
   stroke-width: 5%;

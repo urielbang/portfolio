@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
-import {
-  FaHtml5,
-  FaCss3,
-  FaJava,
-  FaNodeJs,
-  FaReact,
-  FaGit,
-} from "react-icons/fa";
+// import {
+//   FaHtml5,
+//   FaCss3,
+//   FaJava,
+//   FaNodeJs,
+//   FaReact,
+//   FaGit,
+// } from "react-icons/fa";
 import { PiFileSql } from "react-icons/pi";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { IoLogoJavascript } from "react-icons/io5";
-import { BiLogoMongodb } from "react-icons/bi";
-import { SiExpress } from "react-icons/si";
+// import { IoLogoJavascript } from "react-icons/io5";
+// import { BiLogoMongodb } from "react-icons/bi";
+// import { SiExpress } from "react-icons/si";
 import "./style.css";
 import SkillCard from "../../components/SkillCard";
 
@@ -22,61 +22,84 @@ export default function Skills() {
       name: "HTML",
       description:
         "Hypertext Markup Language - the standard markup language for creating web pages and web applications.",
-      icon: <FaHtml5 className="svg" />,
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+      ),
     },
     {
       name: "CSS",
       description:
         "Cascading Style Sheets - a style sheet language used for describing the presentation of a document written in HTML.",
-      icon: <FaCss3 className="svg" />,
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+      ),
     },
     {
       name: "JavaScript",
       description:
         "A high-level programming language that is commonly used as a scripting language for websites.",
-      icon: <IoLogoJavascript className="svg" />,
+      icon: (
+        <img
+          className="svg"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        />
+      ),
     },
     {
       name: "Java",
       description:
         "A widely used programming language for building enterprise-scale applications.",
-      icon: <FaJava className="svg" />,
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+      ),
     },
     {
       name: "Node.js",
       description:
         "An open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside of a web browser.",
-      icon: <FaNodeJs className="svg" />,
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
+      ),
     },
     {
       name: "React",
       description:
         "A JavaScript library for building user interfaces, often used for single-page applications.",
-      icon: <FaReact className="svg" />,
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+      ),
     },
     {
       name: "MongoDB",
       description:
         "A NoSQL database program, using JSON-like documents with optional schemas.",
-      icon: <BiLogoMongodb className="svg" />,
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" />
+      ),
     },
     {
       name: "Express",
       description:
         "A web application framework for Node.js, designed for building web applications and APIs.",
-      icon: <SiExpress className="svg" />,
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
+      ),
     },
     {
       name: "Git",
       description:
         "A distributed version control system for tracking changes in source code during software development.",
-      icon: <FaGit className="svg" />,
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+      ),
     },
     {
       name: "SQL",
       description:
         "Structured Query Language - a domain-specific language used in programming and designed for managing data held in a relational database management system.",
-      icon: <PiFileSql className="svg" />,
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
+      ),
     },
   ]);
 

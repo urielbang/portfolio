@@ -12,6 +12,7 @@ export default function Contact() {
     phone: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false); // State to track loading
 
   const handleChange = (e) => {
     setContactData({ ...contactData, [e.target.name]: e.target.value });
@@ -20,13 +21,19 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); //
 
-    await axios.post(
-      "https://uriel-protfolio.onrender.com/api/v1/contact",
-      contactData
-    );
-
-    setInputValue({ name: "", email: "", phone: "", message: "" });
+    try {
+      await axios.post(
+        "https://uriel-protfolio.onrender.com/api/v1/contact",
+        contactData
+      );
+      setInputValue({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      console.error("Error submitting form: ", error);
+    } finally {
+      setLoading(false); // Set loading to false when the request completes
+    }
   };
 
   useEffect(() => {
@@ -98,9 +105,15 @@ export default function Contact() {
             ></textarea>
             <label>Message</label>
             <div className="containerBtn" data-aos="fade-up">
-              <button type="submit" className="submit-btn">
-                Send Message
-              </button>
+              {loading ? (
+                <button type="button" className="submit-btn" disabled>
+                  <span className="spinner"></span>
+                </button>
+              ) : (
+                <button type="submit" className="submit-btn">
+                  Send Message
+                </button>
+              )}
             </div>
           </div>
         </div>

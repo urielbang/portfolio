@@ -24,8 +24,13 @@ export default function WorkCard({ project, index }) {
         return "https://main--rezume-app.netlify.app";
       case 8:
         return "https://main--togetherapp-uriel.netlify.app";
+      case 9:
+        return "https://renovations-app.vercel.app";
+      case 10:
+        return "https://github.com/urielbang/finance-app-RN";
     }
   };
+  const ifReactNativeImage = project.name.includes("ios");
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotateX = useTransform(y, [-10, 10], [-10, 10]);
@@ -68,7 +73,9 @@ export default function WorkCard({ project, index }) {
         className="cardProject"
         data-aos={aosAnimation}
       >
-        <div className="images">{project.image}</div>
+        <div className={ifReactNativeImage ? "reactNativeImage" : "images"}>
+          {project.image}
+        </div>
         <div className="content">
           <h3>{project.name}</h3>
           <div className="des">{project.description}</div>

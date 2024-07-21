@@ -12,6 +12,8 @@ import spotifyImg from "../../assets/SPOTIFY.png";
 import moviesImg from "../../assets/movies2.png";
 import rezumeBuilderImg from "../../assets/rezumeBuilder.png";
 import socialMediaImg from "../../assets/socialMedia.png";
+import financeAppImg from "../../assets/financeReactNative.png";
+import renovationImg from "../../assets/renovition.png";
 
 export default function Works() {
   const [projects] = useState([
@@ -79,6 +81,20 @@ export default function Works() {
       language: ["JavaScript", "HTML", "CSS", "React", "Node.js", "MongoDB"],
       image: <img src={socialMediaImg} />,
       mission: "Full Stack",
+    },
+    {
+      name: "Renovation",
+      description: "A website to book renovation services.",
+      language: ["JavaScript", "HTML", "CSS", "React", "Node.js", "MongoDB"],
+      image: <img src={renovationImg} />,
+      mission: "Full Stack",
+    },
+    {
+      name: "Finance ios app",
+      description: "A finance management app built with React Native.",
+      language: ["JavaScript", "React Native", "Node.js", "MongoDB"],
+      image: <img src={financeAppImg} />,
+      mission: "Mobile Development",
     },
   ]);
 

@@ -1,5 +1,5 @@
 import AnimatedCursor from "react-animated-cursor";
-import LandPage from "./components/landpage/LandPage";
+import LandPage from "./pages/landpage/LandPage";
 
 import Skills from "./pages/skills/Skills";
 import AOS from "aos";

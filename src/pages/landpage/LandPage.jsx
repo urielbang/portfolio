@@ -1,6 +1,6 @@
-import NavBar from "../navbar/NavBar";
+import NavBar from "../../components/navbar/NavBar";
 import Spline from "@splinetool/react-spline";
-import { saveAs } from "file-saver";
+// import { saveAs } from "file-saver";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import svg from "../../assets/scroll.svg";
 import "./index.css";
@@ -14,11 +14,6 @@ export default function LandPage() {
 
   return (
     <div className="lanPageContainer" id="start">
-      {/* <div id="loader-wrapper">
-        <div id="loader"></div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-      </div> */}
       <NavBar />
       <div className="timeline" data-aos="fade-right">
         <div className="bullet" data-aos="fade-right"></div>
@@ -51,7 +46,7 @@ export default function LandPage() {
         <a
           href="cvUrielPerg.pdf"
           className="cvButton"
-          download="cvUrielPerg.pdf"
+          download="Uriel-Bengaev.CV.pdf"
         >
           Download my CV
         </a>

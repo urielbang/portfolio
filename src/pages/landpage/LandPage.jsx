@@ -16,7 +16,7 @@ export default function LandPage() {
     <div className="lanPageContainer" id="start">
       <NavBar />
       <div className="timeline" data-aos="fade-right">
-        <div className="bullet" data-aos="fade-right"></div>
+        <div className="bullet" data-aos="fade-right" />
         <ScrollLink
           data-aos="fade-right"
           to="work"
@@ -34,11 +34,13 @@ export default function LandPage() {
           />
         </ScrollLink>
       </div>
+
       <div className="containerText" data-aos="fade-right">
         <a>
           {`Start`}
           <span>{`/>`}</span>
         </a>
+
         <h1>
           Hi, my name is <span className="namePurple">Uriel Bengaev</span>
         </h1>

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { CiCircleQuestion } from "react-icons/ci";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { motion, useMotionValue, useTransform } from "framer-motion";
@@ -15,11 +15,11 @@ export default function WorkCard({ project, index }) {
       case 3:
         return "https://job-q-d8a10.web.app";
       case 4:
-        return "https://store-app-uriel.netlify.app";
+        return "https://movies-app-psi-ruby.vercel.app";
       case 5:
-        return "https://urielbang.github.io/calculator-app-main";
+        return "https://calculator-app-eight-virid.vercel.app/";
       case 6:
-        return "https://urielbang.github.io/app-movies";
+        return "https://store-app-uriel.netlify.app";
       case 7:
         return "https://main--rezume-app.netlify.app";
       case 8:

@@ -48,10 +48,10 @@ export default function Works() {
       mission: "Full Stack",
     },
     {
-      name: "Store App",
-      description: "An app for buying vegetables and fruits.",
+      name: "Movies App",
+      description: "An app to view information about movies.",
       language: ["JavaScript", "HTML", "CSS", "React", "Node.js", "MongoDB"],
-      image: <img src={storeImg} />,
+      image: <img src={moviesImg} />,
       mission: "Full Stack",
     },
     {
@@ -62,10 +62,10 @@ export default function Works() {
       mission: "Full Stack",
     },
     {
-      name: "Movies App",
-      description: "An app to view information about movies.",
+      name: "Store App",
+      description: "An app for buying vegetables and fruits.",
       language: ["JavaScript", "HTML", "CSS", "React", "Node.js", "MongoDB"],
-      image: <img src={moviesImg} />,
+      image: <img src={storeImg} />,
       mission: "Full Stack",
     },
     {

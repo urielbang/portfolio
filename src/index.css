@@ -6,3 +6,16 @@ body {
 a {
   text-decoration: none;
 }
+
+@media only screen and (max-width: 700px) {
+  .skillsTag {
+    margin-left: 4rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .projects .title {
+    font-size: 2rem;
+    margin: 2rem;
+  }
+}

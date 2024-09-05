@@ -50,6 +50,8 @@
   padding: 20px;
   border-radius: 20px;
   background-color: #01082488;
+  position: relative;
+  left: 0.5rem;
 }
 svg {
   font-size: 1.5rem;

@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Sling as Hamburger } from "hamburger-react";
 
 import "./index.css";
 
 export default function NavBar() {
   const [isCross, setIsCross] = useState(false);
   const [activeItem, setActiveItem] = useState("Start");
+
   const scrollToPage = (namePage) => {
     setActiveItem(namePage);
     scroll.scrollTo(`#${namePage}`, {
@@ -13,6 +15,7 @@ export default function NavBar() {
       smooth: "easeInOutQuart",
     });
   };
+
   const handleClick = () => {
     setIsCross((prevState) => !prevState);
   };
@@ -23,82 +26,28 @@ export default function NavBar() {
         <span>{`<`}</span>URI-B<span>{`/>`}</span>
       </a>
 
-      <ul className={isCross ? "activeNab" : "containerList"}>
-        <ScrollLink
-          style={{ color: activeItem === "start" ? "white" : "" }}
-          to="start"
-          smooth={true}
-          duration={800}
-          onClick={() => {
-            scrollToPage("start");
-            handleClick();
-          }}
-        >
-          Start
-          <span>{`/>`}</span>
-        </ScrollLink>
-
-        <ScrollLink
-          to="skills"
-          style={{ color: activeItem === "skills" ? "white" : "" }}
-          smooth={true}
-          duration={800}
-          onClick={() => {
-            scrollToPage("skills");
-            handleClick();
-          }}
-        >
-          Skills
-          <span>{`/>`}</span>
-        </ScrollLink>
-
-        <ScrollLink
-          to="work"
-          style={{ color: activeItem === "Work" ? "white" : "" }}
-          className="scroll-bottom"
-          smooth={true}
-          duration={800}
-          onClick={() => {
-            scrollToPage("Work");
-            handleClick();
-          }}
-        >
-          Work
-          <span>{`/>`}</span>
-        </ScrollLink>
-
-        <ScrollLink
-          to="contact"
-          style={{ color: activeItem === "contact" ? "white" : "" }}
-          className="scroll-bottom"
-          smooth={true}
-          duration={800}
-          onClick={() => {
-            scrollToPage("contact");
-            handleClick();
-          }}
-        >
-          Contact
-          <span>{`/>`}</span>
-        </ScrollLink>
+      <ul className={isCross ? "activeNab active" : "containerList"}>
+        {["start", "skills", "work", "contact"].map((item, index) => (
+          <li key={index}>
+            <ScrollLink
+              to={item}
+              smooth={true}
+              duration={800}
+              style={{ color: activeItem === item ? "white" : "" }}
+              onClick={() => {
+                scrollToPage(item);
+                handleClick();
+              }}
+            >
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+              <span>{`/>`}</span>
+            </ScrollLink>
+          </li>
+        ))}
       </ul>
-      <div
-        className={isCross ? "cross" : ""}
-        id="hamaburger"
-        onClick={handleClick}
-      >
-        <svg id="icon" viewBox="0 0 800 600">
-          <path
-            d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"
-            id="top"
-          ></path>
-          <path d="M300,320 L540,320" id="middle"></path>
-          <path
-            d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190"
-            id="bottom"
-            transform="translate(480, 320) scale(1, -1) translate(-480, -318) "
-          ></path>
-        </svg>
+
+      <div id="hamaburger" onClick={handleClick}>
+        <Hamburger direction="left" rounded duration={0.6} />
       </div>
     </nav>
   );

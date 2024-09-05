@@ -169,7 +169,7 @@ h1 {
   transform: translateY(-100%);
   transition: all 0.3s 1s ease-out;
 }
-.bullet {
+/* .bullet {
   position: absolute;
 }
 .bullet:before {
@@ -183,7 +183,7 @@ h1 {
   position: absolute;
   width: 0.5rem;
   z-index: 10;
-}
+} */
 .containerText {
   display: flex;
   gap: 1rem;

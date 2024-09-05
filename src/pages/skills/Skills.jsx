@@ -133,6 +133,14 @@ export default function Skills() {
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" />
       ),
     },
+    {
+      name: "Redux",
+      description:
+        "A predictable state container for JavaScript apps, commonly used with React for managing application state.",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" />
+      ),
+    },
   ]);
 
   useEffect(() => {

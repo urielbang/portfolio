@@ -1,13 +1,6 @@
-import React, { useEffect, useState } from "react";
-// import {
-//   FaHtml5,
-//   FaCss3,
-//   FaJava,
-//   FaNodeJs,
-//   FaReact,
-//   FaGit,
-// } from "react-icons/fa";
-import { PiFileSql } from "react-icons/pi";
+import { useEffect, useState } from "react";
+
+// import { PiFileSql } from "react-icons/pi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // import { IoLogoJavascript } from "react-icons/io5";

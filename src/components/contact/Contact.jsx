@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./style.css";
 import axios from "axios";
+import StarryBackground from "../starbackground/StarBackGround";
 
 export default function Contact() {
   const [contactData, setContactData] = useState({});
@@ -42,6 +43,8 @@ export default function Contact() {
 
   return (
     <form className="container" id="contact" onSubmit={handleSubmit}>
+      <StarryBackground />
+
       <div className="row">
         <h1 className="headerTxt" data-aos="fade-up" data-aos-duration="3000">
           GET IN TOUCH

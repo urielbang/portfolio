@@ -23,7 +23,7 @@ export default function NavBar() {
   return (
     <nav className="navBar" data-aos="fade-up">
       <a className="logoName">
-        <span>{`<`}</span>URI-B<span>{`/>`}</span>
+        <span>{`<`}</span>Uriel<span>{`/>`}</span>
       </a>
 
       <ul className={isCross ? "activeNab active" : "containerList"}>

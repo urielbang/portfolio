@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
 .navBar {
   backdrop-filter: blur(10px);
   padding: 1rem;
@@ -27,7 +29,7 @@
 .logoName {
   font-weight: bold;
   font-size: 2.5rem;
-  font-family: "Dancing Script", cursive;
+  font-family: "Exo", sans-serif;
 
   letter-spacing: 0.2rem;
   margin-left: 1.5rem;

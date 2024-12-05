@@ -65,9 +65,9 @@ export default function LandPage() {
                 />
               </h1>
               <a
-                href="cvUrielPerg.pdf"
+                href="cv.pdf"
                 className="cvButton"
-                download="Uriel-Bengaev.CV.pdf"
+                download="Uriel Bengaev CV.pdf"
               >
                 Download my CV
               </a>

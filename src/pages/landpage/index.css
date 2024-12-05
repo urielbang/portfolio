@@ -233,6 +233,7 @@ h1 {
   border-radius: 40px;
   margin-top: 30px;
   display: block;
+  z-index: 200;
   width: max-content;
 }
 

@@ -1,6 +1,5 @@
 import NavBar from "../../components/navbar/NavBar";
 import Spline from "@splinetool/react-spline";
-// import { saveAs } from "file-saver";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import svg from "../../assets/scroll.svg";
 import "./index.css";

@@ -76,9 +76,7 @@ export default function LandPage() {
             </div>
 
             <div className="containerAnimation">
-              <div className="computerAnimation">
-                <Spline scene="https://prod.spline.design/Tt1-9L8VAmUjF5QR/scene.splinecode" />
-              </div>
+              <div className="computerAnimation"></div>
             </div>
           </div>
         </>

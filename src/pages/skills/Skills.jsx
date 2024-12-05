@@ -39,6 +39,54 @@ export default function Skills() {
       ),
     },
     {
+      name: "Postman",
+      description:
+        "A collaboration platform for API development, enabling developers to design, test, and document APIs.",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" />
+      ),
+    },
+    {
+      name: "Jest",
+      description:
+        "A JavaScript testing framework designed to ensure correctness of any JavaScript codebase.",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg" />
+      ),
+    },
+    {
+      name: "JSON",
+      description:
+        "JavaScript Object Notation - a lightweight data-interchange format, easy for humans to read and write.",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg" />
+      ),
+    },
+    {
+      name: "Next.js",
+      description:
+        "A React framework that enables server-side rendering and static site generation for building web applications.",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" />
+      ),
+    },
+    {
+      name: "npm",
+      description:
+        "Node Package Manager - a package manager for JavaScript that enables developers to share and reuse code.",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg" />
+      ),
+    },
+    {
+      name: "React Router",
+      description:
+        "A library for managing navigation and routing in React applications.",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original-wordmark.svg" />
+      ),
+    },
+    {
       name: "Java",
       description:
         "A widely used programming language for building enterprise-scale applications.",
@@ -132,6 +180,22 @@ export default function Skills() {
         "A predictable state container for JavaScript apps, commonly used with React for managing application state.",
       icon: (
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" />
+      ),
+    },
+    {
+      name: "Xcode",
+      description:
+        "An integrated development environment (IDE) for macOS containing tools for developing software for Apple's platforms.",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xcode/xcode-original.svg" />
+      ),
+    },
+    {
+      name: "Android Studio",
+      description:
+        "The official integrated development environment (IDE) for Google's Android operating system.",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original-wordmark.svg" />
       ),
     },
   ]);

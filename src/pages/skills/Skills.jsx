@@ -198,6 +198,14 @@ export default function Skills() {
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original-wordmark.svg" />
       ),
     },
+    {
+      name: "GitHub",
+      description:
+        "A code hosting platform for version control and collaboration using Git, commonly used by developers worldwide.",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
+      ),
+    },
   ]);
 
   useEffect(() => {

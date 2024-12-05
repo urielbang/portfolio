@@ -4,6 +4,7 @@ import Spline from "@splinetool/react-spline";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import svg from "../../assets/scroll.svg";
 import "./index.css";
+import { Typewriter } from "react-simple-typewriter";
 export default function LandPage() {
   const scrollToWork = () => {
     scroll.scrollTo("#start", {
@@ -25,13 +26,7 @@ export default function LandPage() {
           duration={800}
           onClick={scrollToWork}
         >
-          <img
-            className="scroll-img"
-            src={svg}
-            alt=""
-            srcset=""
-            data-aos="fade-right"
-          />
+          <img className="scroll-img" src={svg} alt="" data-aos="fade-right" />
         </ScrollLink>
       </div>
 
@@ -44,7 +39,24 @@ export default function LandPage() {
         <h1>
           Hi, my name is <span className="namePurple">Uriel Bengaev</span>
         </h1>
-        <h1>I'm Full stack developer</h1>
+        <h1>
+          I'm
+          <Typewriter
+            words={[
+              " a Frontend Developer",
+              " a React Developer",
+              " a Full Stack Developer",
+              " a Creative Programmer",
+              " a Backend Developer",
+            ]}
+            loop={true}
+            cursor
+            cursorStyle="|"
+            typeSpeed={150}
+            deleteSpeed={100}
+            delaySpeed={1500}
+          />
+        </h1>
         <a
           href="cvUrielPerg.pdf"
           className="cvButton"

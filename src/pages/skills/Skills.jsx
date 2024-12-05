@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
 
-// import { PiFileSql } from "react-icons/pi";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import { IoLogoJavascript } from "react-icons/io5";
-// import { BiLogoMongodb } from "react-icons/bi";
-// import { SiExpress } from "react-icons/si";
+
 import "./style.css";
 import SkillCard from "../../components/SkillCard";
 
